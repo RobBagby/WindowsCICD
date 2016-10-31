@@ -18,11 +18,11 @@ RUN powershell remove-item C:\inetpub\wwwroot\iisstart.*
 # Copy files (temporary work folder)
 RUN md c:\build
 WORKDIR c:/build
-COPY ./ c:/build/
+COPY . c:/build
 
 # Restore packages, build, copy
 RUN nuget restore \
-&& "c:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" /p:Platform="Any CPU" /p:VisualStudioVersion=12.0 /p:VSToolsPath=c:\MSBuild.Microsoft.VisualStudio.Web.targets.14.0.0.3\tools\VSToolsPath GenericWeb.sln \
-&& xcopy c:\build\GenericWeb\* c:\inetpub\wwwroot /s
+&& "c:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" /p:Platform="Any CPU" /p:VisualStudioVersion=12.0 /p:VSToolsPath=c:\MSBuild.Microsoft.VisualStudio.Web.targets.14.0.0.3\tools\VSToolsPath GenericWeb\GenericWeb.sln \
+&& xcopy c:\build\GenericWeb\GenericWeb\ c:\inetpub\wwwroot /s
 
 ENTRYPOINT powershell .\InitializeContainer
