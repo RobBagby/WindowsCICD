@@ -26,6 +26,6 @@ RUN nuget restore \
 && "c:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" /p:Platform="Any CPU" /p:VisualStudioVersion=12.0 /p:VSToolsPath=c:\MSBuild.Microsoft.VisualStudio.Web.targets.14.0.0.3\tools\VSToolsPath C:\Build\GenericWeb\GenericWeb.sln
 
 WORKDIR c:/build
-RUN xcopy C:\Build\GenericWeb\GenericWeb c:\inetpub\wwwroot /s
+RUN xcopy C:\Build\GenericWeb c:\inetpub\wwwroot /s
 
 ENTRYPOINT powershell .\InitializeContainer
