@@ -18,7 +18,7 @@ RUN powershell remove-item C:\inetpub\wwwroot\iisstart.*
 # Copy files (temporary work folder)
 RUN md c:\build
 WORKDIR c:/build
-COPY . c:/build
+COPY ./ c:/build/
 
 # Restore packages, build, copy
 RUN nuget restore \
