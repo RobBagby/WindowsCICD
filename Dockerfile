@@ -10,6 +10,7 @@ RUN powershell add-windowsfeature web-asp-net45 \
 && choco install microsoft-build-tools -y --allow-empty-checksums -version 14.0.23107.10 \
 && choco install dotnet4.6-targetpack --allow-empty-checksums -y \
 && choco install nuget.commandline --allow-empty-checksums -y \
+&& choco install nunit.install -version 2.6.4 --allow-empty-checksums -y \
 && nuget install MSBuild.Microsoft.VisualStudio.Web.targets -Version 14.0.0.3 \
 && nuget install WebConfigTransformRunner -Version 1.0.0.1
 
