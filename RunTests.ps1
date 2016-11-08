@@ -1,2 +1,2 @@
-﻿cd "C:\Program Files (x86)\NUnit 2.6.4\bin"
-.\nunit-console.exe /xml:"c:\Build\results.xml" "c:\Build\GenericWeb\GenericWeb.Tests\bin\Debug\GenericWeb.Tests.dll"
+﻿cd C:\build\GenericWeb\GenericWeb.Tests\bin\Debug
+.\GenericWeb.Tests.exe --out=c:\Test\TestResults.txt --work=c:\Test
