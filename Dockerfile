@@ -19,8 +19,8 @@ RUN md c:\build
 WORKDIR c:/build
 COPY . c:/build
 
-RUN md c:\test \
-WORKDIR c:/test \
+RUN md c:\test 
+WORKDIR c:/test 
 COPY ./GenericWeb/GenericWeb.Tests/bin/Debug c:/test
 
 # Restore packages, build, copy
