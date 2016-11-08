@@ -21,7 +21,7 @@ WORKDIR c:/build
 COPY . c:/build 
 
 # Restore packages, build, copy
-WORKDIR c:/build/GenericWeb
+#WORKDIR c:/build/GenericWeb
 RUN nuget restore \
 && "c:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" /p:Platform="Any CPU" /p:VisualStudioVersion=12.0 /p:VSToolsPath=c:\MSBuild.Microsoft.VisualStudio.Web.targets.14.0.0.3\tools\VSToolsPath C:\Build\GenericWeb\GenericWeb.sln
 
