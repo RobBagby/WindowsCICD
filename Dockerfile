@@ -20,8 +20,9 @@ WORKDIR c:/build
 COPY . c:/build
 
 RUN md c:\test 
-WORKDIR c:/test 
-COPY GenericWeb/GenericWeb.Tests/bin/Debug c:/test/
+#WORKDIR c:/test 
+RUN powershell move-item -Path C:\build\genericweb\genericweb.tests\bin\debug -Destination c:\test
+RUN powershell remove-item C:\build\genericweb\genericweb.tests
 
 # Restore packages, build, copy
 #WORKDIR c:/build/GenericWeb
