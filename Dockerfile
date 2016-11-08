@@ -21,8 +21,8 @@ COPY . c:/build
 
 RUN md c:\test 
 #WORKDIR c:/test 
-RUN powershell move-item -Path C:\build\genericweb\genericweb.tests\bin\debug -Destination c:\test
-RUN powershell remove-item C:\build\genericweb\genericweb.tests
+RUN powershell move-item -Path C:\build\GenericWeb\GenericWeb.Tests\bin\Debug -Destination c:\test
+RUN powershell remove-item C:\build\GenericWeb\GenericWeb.Tests
 
 # Restore packages, build, copy
 #WORKDIR c:/build/GenericWeb
