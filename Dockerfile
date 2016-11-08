@@ -16,8 +16,8 @@ RUN powershell add-windowsfeature web-asp-net45 \
 
 # Copy files (temporary work folder)
 RUN md c:\build \
-RUN md c:\test \
-WORKDIR c:/build \
+&& md c:\test 
+WORKDIR c:/build 
 COPY . c:/build 
 
 # Restore packages, build, copy
