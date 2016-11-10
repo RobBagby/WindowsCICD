@@ -12,11 +12,6 @@ namespace GenericWeb.Tests.Controllers
     [TestFixture]
     public class HomeControllerTest
     {
-        [Test]
-        public void TestThatWIllFail()
-        {
-            Assert.Fail("This is a failure message");
-        }
 
         [Test]
         public void Index()
