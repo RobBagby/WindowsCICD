@@ -28,5 +28,4 @@ RUN nuget restore \
 WORKDIR c:/build
 RUN xcopy C:\Build\GenericWeb\GenericWeb\* c:\inetpub\wwwroot /s
 
-# ENTRYPOINT powershell .\InitializeContainer
-ENTRYPOINT powershell 
+ENTRYPOINT ["C"\\ServiceMonitor.exe","w3svc"] 
